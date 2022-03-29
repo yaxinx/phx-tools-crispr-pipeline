@@ -1,27 +1,33 @@
---- Project:
-  - project_name: 'Lung_senescence_comfirmation_screen_2022.03'
-  - screen_type: 'confirmation screen'
+Project:
+  - project_name: 'Lung_senescence_screen_test_2022.03'
+  - screen_type: 'primary screen'
 
---- Data:
+Data:
+    - data_directory: './test/'
+    - screen_metadata: 'example_screen_meta_data.csv'
+    - screen_assaydata: 'example_screen_assay_data.csv'
+
+
+Endpoint:
   # Define min.control and max.control for all endpoints
-  - endpoint: ALL
+  - endpoint_name: ALL
     min.control: Neutral Control
     max.control: Stimulator Control
+    
   # Specify for particular endpoints when applying different controls
-  - endpoint: Cell_Number
+  - endpoint_name: Cell_Number
     min.control: Stimulator Control
     max.control: Neutral Control
 
-  - endpoint: Nucleus_area
+  - endpoint_name: Nucleus_area
     min.control: Neutral Control
     max.control: Stimulator Control
 
-  - endpoint: Cell_area
+  - endpoint_name: Cell_area
     min.control: Neutral Control
     max.control: Stimulator Control
 
+APP:
+  - work_directory: './'
+  - run_module: 01, 02
 
-
---- APP:
-  - work_dir: '.'
-  - run: 01, 02
