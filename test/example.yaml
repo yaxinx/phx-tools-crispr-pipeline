@@ -31,6 +31,6 @@ Endpoint:
 
 APP:
   - work_directory: './'
-  # modules: 01.pre_processing, 02.quality_control, 03.normalization, 04.hit_identification
+  # modules: 01.preprocessing, 02.quality_control, 03.normalization, 04.hit_identification
   - run_module: 01, 02
 
