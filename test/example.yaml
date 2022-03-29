@@ -13,7 +13,9 @@ Endpoint:
   - endpoint_name: ALL
     min.control: Neutral Control
     max.control: Stimulator Control
-    
+  # Set NULL when there is no treatment
+    min.treatment: NULL
+    max.treatment: NULL
   # Specify for particular endpoints when applying different controls
   - endpoint_name: Cell_Number
     min.control: Stimulator Control
@@ -29,5 +31,6 @@ Endpoint:
 
 APP:
   - work_directory: './'
+  # modules: 01.pre_processing, 02.quality_control, 03.normalization, 04.hit_identification
   - run_module: 01, 02
 
