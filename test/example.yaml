@@ -9,11 +9,11 @@ Data:
 
 
 Endpoint:
-  # Define min.control and max.control for all endpoints
-  - endpoint_name: ALL
+  # Define min.control and max.control for default endpoints
+  - endpoint_name: DEFAULT
     min.control: Neutral Control
     max.control: Stimulator Control
-  # Set NULL when there is no treatment
+  # Set NULL when there is no treatment 
     min.treatment: NULL
     max.treatment: NULL
   # Specify for particular endpoints when applying different controls
